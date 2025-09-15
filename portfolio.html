@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Professional Freelancer Portfolio</title>
+<style>
+  /* Reset */
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  body { background: #121212; color: #e0e0e0; line-height: 1.6; scroll-behavior: smooth; }
+  a { color: #4fc3f7; text-decoration: none; }
+  a:hover { color: #0288d1; }
+
+  /* Container */
+  .container { width: 90%; max-width: 900px; margin: 100px auto 60px auto; }
+
+  /* Navbar */
+  nav { background: #1f1f1f; position: fixed; top: 0; left: 0; right: 0; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.8); z-index: 999; }
+  nav a { margin: 0 18px; font-weight: 600; font-size: 1.1rem; padding: 8px 12px; border-radius: 6px; transition: background 0.3s ease; }
+  nav a:hover { background: #0288d1; }
+
+  header { text-align: center; margin-bottom: 60px; }
+  header h1 { font-size: 3rem; margin-bottom: 10px; color: #4fc3f7; letter-spacing: 1.2px; }
+  header p { font-size: 1.3rem; color: #b0bec5; }
+
+  section { margin-bottom: 60px; opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  section.visible { opacity: 1; transform: translateY(0); }
+  section h2 { font-size: 2rem; border-bottom: 3px solid #0288d1; padding-bottom: 8px; margin-bottom: 20px; }
+
+  /* About */
+  #about p { font-size: 1.1rem; color: #cfd8dc; }
+
+  /* Skills */
+  #skills ul { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; padding-left: 0; }
+  #skills ul li { background: #0288d1; color: white; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(2,136,209,0.6); transition: transform 0.3s ease; }
+  #skills ul li:hover { transform: scale(1.1); }
+
+  /* Portfolio */
+  #portfolio .project-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 25px; }
+  #portfolio .project { background: #1f1f1f; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.7); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  #portfolio .project:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(4,112,235,0.8); }
+  #portfolio .project h3 { margin-bottom: 12px; color: #4fc3f7; }
+  #portfolio .project p { color: #b0bec5; margin-bottom: 15px; min-height: 60px; }
+  #portfolio .project a { font-weight: 700; padding: 10px 15px; display: inline-block; background: #0288d1; border-radius: 8px; color: white; box-shadow: 0 4px 12px rgba(2,136,209,0.7); transition: background 0.3s ease; }
+  #portfolio .project a:hover { background: #01579b; }
+
+  /* Contact */
+  #contact form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 18px; }
+  #contact input, #contact textarea { padding: 14px; border: none; border-radius: 10px; font-size: 1.1rem; background: #2c2c2c; color: #eee; resize: vertical; }
+  #contact input:focus, #contact textarea:focus { outline: none; box-shadow: 0 0 10px #0288d1; }
+  #contact button { background: #0288d1; color: white; padding: 14px; font-size: 1.3rem; font-weight: 700; border-radius: 10px; cursor: pointer; transition: background 0.3s ease; }
+  #contact button:hover { background: #01579b; }
+
+  /* Footer */
+  footer { text-align: center; padding: 20px 0; color: #666; font-size: 1rem; border-top: 1px solid #333; }
+
+  /* Responsive Nav for Mobile */
+  @media (max-width: 600px) {
+    nav a { margin: 0 8px; font-size: 1rem; }
+    .container { width: 95%; margin-top: 90px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+  <header>
+    <h1>moni</h1>
+    <p>Creative Freelance Developer & Designer</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm a passionate web developer who loves creating sleek and modern websites that provide great user experiences. I specialize in front-end and back-end technologies and always strive to learn new skills.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript (ES6+)</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>Python</li>
+      <li>SQL & NoSQL</li>
+    </ul>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Modern Business Website</h3>
+        <p>A fully responsive website built with React and Tailwind CSS for a local business.</p>
+        <a href="https://example.com/project1" target="_blank" rel="noopener">View Project</a>
+      </div>
+      <div class="project">
+        <h3>E-commerce Platform</h3>
+        <p>Custom-built e-commerce platform with payment gateway integration and admin dashboard.</p>
+        <a href="https://example.com/project2" target="_blank" rel="noopener">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Personal Blog CMS</h3>
+        <p>Blog platform with user authentication, post management, and rich text editor features.</p>
+        <a href="https://example.com/project3" target="_blank" rel="noopener">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <!-- Mailto contact form -->
+    <form action="mailto:46moni96@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 moni. All rights reserved.
+  </footer>
+</div>
+
+<script>
+  // Animate sections on scroll
+  function revealSections() {
+    const sections = document.querySelectorAll('section');
+    const windowHeight = window.innerHeight;
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop < windowHeight - 100) section.classList.add('visible');
+    });
+  }
+  window.addEventListener('scroll', revealSections);
+  window.addEventListener('load', revealSections);
+</script>
+
+</body>
+</html>
